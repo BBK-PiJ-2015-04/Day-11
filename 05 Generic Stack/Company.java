@@ -1,8 +1,10 @@
 /**
  *
- * Extend your class from the former exercise to create a sorted list. You may
- * need to override the method that adds new elements to the list. The subclass
- * should be generic.
+ * Modify the doubly-linked list that you have created in past weeks to make it
+ * generic, i.e. to allow it to have values of its elements of any type. Once
+ * you have it ready, create a class Company that keeps two linked lists, one
+ * with the names of the employees and one with their National Insurance
+ * Number.
  *
  */
 
@@ -10,8 +12,8 @@ public class Company {
 	
 	public static void main(String[] args) {
 		
-		SortedList<String> empNames = new SortedList<>();
-		SortedList<Integer> empNumbers = new SortedList<>();
+		PatientList<String> empNames = new PatientList<>();
+		PatientList<Integer> empNumbers = new PatientList<>();
 		
 		empNames.add("John");
 		empNumbers.add(123);
@@ -23,16 +25,12 @@ public class Company {
 		empNumbers.add(101);
 		empNames.add("Johann");
 		empNumbers.add(201);
-		empNames.add("Xavier");
-		empNumbers.add(349);
-		empNames.add("Anthony");
-		empNumbers.add(555);
 		
 		for(int i = 0; i < empNames.size(); i++) {
 			System.out.println("Name: " + empNames.get(i) + "\tNumber: " + empNumbers.get(i));
 		}
 	
-		System.out.println("\n" + empNames.remove(2) + " with number " + empNumbers.remove(2) + " is gone! \n");
+		System.out.println("\n" + empNames.remove(3) + " with number " + empNumbers.remove(3) + " is gone! \n");
 		
 		for(int i = 0; i < empNames.size(); i++) {
 			System.out.println("Name: " + empNames.get(i) + "\tNumber: " + empNumbers.get(i));
