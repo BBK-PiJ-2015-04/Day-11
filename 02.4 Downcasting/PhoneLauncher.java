@@ -36,7 +36,7 @@ public class PhoneLauncher {
 		((SmartPhone)iPhone).findPosition();
 		
 		System.out.println(iPhone.getBrand());
-		
+		System.out.println(iPhone.getClass());
 		testPhone(iPhone);
 		
 	}
